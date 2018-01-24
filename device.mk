@@ -78,6 +78,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
+# TextClassifier smart selection model
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
+
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
