@@ -25,6 +25,9 @@ TARGET_USES_QCOM_MM_AUDIO := true
 # Assertions
 TARGET_BOARD_INFO_FILE := device/yu/tomato/board-info.txt
 
+# Audio
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/yu/tomato/bluetooth
 
