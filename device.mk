@@ -132,6 +132,10 @@ MiXplorer
 PRODUCT_PACKAGES += \
 android.hardware.graphics.composer@2.1-impl
 
+# Pixel apps
+PRODUCT_PACKAGES += \
+    WallpaperPickerGooglePrebuilt
+
 # Healthd packages
 PRODUCT_PACKAGES += \
 cm_charger_res_images \
