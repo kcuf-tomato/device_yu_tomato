@@ -29,3 +29,8 @@ QCOM_HARDWARE_VARIANT := msm8916
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
+TARGET_QCOM_WLAN_VARIANT := wlan-caf
+
+#Telephony
+PRODUCT_PACKAGES += qti-telephony-common
+PRODUCT_BOOT_JARS += telephony-ext
