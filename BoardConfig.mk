@@ -43,3 +43,7 @@ PRODUCT_BOOT_JARS += telephony-ext
 
 #mm-qcamera-deamon
 TARGET_DESTROYED_MUTEX_USAGE_WHITELIST := mm-qcamera-daemon
+
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+	/system/bin/mediaserver=23 \
+	/system/vendor/bin/mm-qcamera-daemon=23
