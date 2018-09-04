@@ -40,3 +40,6 @@ TARGET_QCOM_WLAN_VARIANT := wlan-caf
 #Telephony
 PRODUCT_PACKAGES += qti-telephony-common
 PRODUCT_BOOT_JARS += telephony-ext
+
+#mm-qcamera-deamon
+TARGET_DESTROYED_MUTEX_USAGE_WHITELIST := mm-qcamera-daemon
