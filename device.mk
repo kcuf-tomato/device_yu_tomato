@@ -57,3 +57,7 @@ PRODUCT_PACKAGES += \
     libshims_boringssl \
     libshims_camera \
     libshims_ims
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.cyanogen_8916
