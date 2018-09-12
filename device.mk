@@ -35,8 +35,10 @@ include $(LOCAL_PATH)/product/*.mk
 # Call the proprietary setup
 $(call inherit-product, vendor/yu/tomato/tomato-vendor.mk)
 
-#PRODUCT_PACKAGES +=\
-MiXplorer
+PRODUCT_PACKAGES +=\
+MiXplorer \
+Markup \
+NexusLauncher
 
 PRODUCT_PACKAGES += \
 android.hardware.graphics.composer@2.1-impl
@@ -64,7 +66,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
-
-# Gatekeeper HAL
-	android.hardware.gatekeeper@1.0-impl \
-	android.hardware.gatekeeper@1.0-service
