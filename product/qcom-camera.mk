@@ -4,8 +4,8 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8916 \
     libmm-qcamera \
-    Camera2
-
+    SnapdragonCamera \
+    FootejCamera
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
