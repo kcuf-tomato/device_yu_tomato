@@ -15,16 +15,21 @@ vidc.dec.downscalar_height=1088
 vidc.disable.split.mode=1
 vidc.enc.disable_bframes=1
 vidc.enc.disable_pframes=1
-vidc.enc.narrow.searchrange=
+vidc.enc.narrow.searchrange=1
 
 #Ril
+DEVICE_PROVISIONED=1
 persist.data.target=dpm1
 persist.radio.multisim.config=dsds
+persist.radio.no_cons_man_roam=1
 ro.config.always_show_roaming=true
 rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
 ril.ecclist=000,08,100,101,102,110,112,118,119,120,122,911,999
 ril.ecclist1=000,08,100,101,102,110,112,118,119,120,122,911,999
 ro.telephony.default_network=9,9
+vendor.rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
+vendor.rild.libargs=-d /dev/smd0
 
 #Usb
 ro.usb.id.midi=90BA
@@ -39,3 +44,48 @@ ro.usb.vid=05c6
 
 #DeepSleep
 pm.sleep_mode=1
+
+# Fling velocities
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
+
+# Dalvik
+dalvik.vm.checkjni=false
+dalvik.vm.verify-bytecode=false
+persist.sys.purgeable_assets=1
+
+# Dex2oat optimisation
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.dex2oat-flags=--no-watch-dog
+dalvik.vm.dex2oat-swap=false
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-threads=4
+ro.sys.fw.dex2oat_thread_count=4
+
+# Play store
+ro.com.google.clientidbase.am=android-micromax
+ro.com.google.clientidbase.gmm=android-micromax
+ro.com.google.clientidbase.ms=android-micromax
+ro.com.google.clientidbase.yt=android-micromax
+
+# Google DNS
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.wlan0.dns1=8.8.8.8
+net.wlan0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
+dhcp.eth0.dns1=8.8.8.8
+dhcp.eth0.dns2=8.8.4.4
+dhcp.wlan0.dns1=8.8.8.8
+dhcp.wlan0.dns2=8.8.4.4
+
+# Healthd
+ro.enable_boot_charger_mode=1
+
