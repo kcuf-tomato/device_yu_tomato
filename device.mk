@@ -201,3 +201,10 @@ PRODUCT_COPY_FILES += \
  #      /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
  #      /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
  #      /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
+
+#Camera Sounds
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/camsounds/camera_click.ogg:system/product/media/audio/ui \
+    $(LOCAL_PATH)/camsounds/camera_focus.ogg:system/product/media/audio/ui \
+    $(LOCAL_PATH)/camsounds/VideoStop.ogg:system/product/media/audio/ui \
+    $(LOCAL_PATH)/camsounds/VideoRecord.ogg:system/product/media/audio/ui
