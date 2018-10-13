@@ -14,14 +14,15 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := aosp_tomato
+PRODUCT_NAME := liquid_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
+PRODUCT_MODEL := AO5510
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
 
