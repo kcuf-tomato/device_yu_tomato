@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
 
 # TextClassifier smart selection model
 PRODUCT_PACKAGES += \
-    textclassifier.smartselection.bundle1
+    textclassifier.bundle1
 
 # Init scripts
 PRODUCT_PACKAGES += \
