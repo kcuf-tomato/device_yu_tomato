@@ -112,6 +112,15 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.audio.sink=280 \
+    vidc.dec.downscalar_width=1920 \
+    vidc.dec.downscalar_height=1088 \
+    vidc.disable.split.mode=1 \
+    vidc.enc.disable_bframes=1 \
+    vidc.enc.disable_pframes=1 \
+    vidc.enc.narrow.searchrange=1
+
 #Apps
 PRODUCT_PACKAGES +=\
 MiXplorer \
