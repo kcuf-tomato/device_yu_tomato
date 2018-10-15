@@ -127,8 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Apps
 PRODUCT_PACKAGES +=\
-MiXplorer \
-Markup
+MiXplorer 
 
 PRODUCT_PACKAGES += \
 android.hardware.graphics.composer@2.1-impl
