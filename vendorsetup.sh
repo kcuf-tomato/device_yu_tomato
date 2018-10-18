@@ -1,2 +1,2 @@
-add_lunch_combo liquid_tomato-userdebug
-add_lunch_combo liquid_tomato-eng
+add_lunch_combo stag_tomato-userdebug
+add_lunch_combo stag_tomato-eng
