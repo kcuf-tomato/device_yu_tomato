@@ -72,7 +72,7 @@ TARGET_SYSTEM_PROP += device/yu/tomato/system.prop
 
 # HIDL
 DEVICE_MANIFEST_FILE := device/yu/tomato/manifest.xml
-
+DEVICE_MATRIX_FILE := device/yu/tomato/compatibility_matrix.xml
 # Init
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := device/yu/tomato/init/init_tomato.cpp
 
@@ -90,7 +90,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_LIGHTS_VARIANT := aw2013
 TARGET_PROVIDES_LIBLIGHT := true
 
-#Media
+# Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # PowerHAL
