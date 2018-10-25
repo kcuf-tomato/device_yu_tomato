@@ -104,9 +104,6 @@ TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := device/yu/tomato/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 
-# Widevine
-BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
-
 # Inherit from proprietary files
 include vendor/yu/tomato/BoardConfigVendor.mk
 
