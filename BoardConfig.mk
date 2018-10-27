@@ -95,6 +95,10 @@ TARGET_POWER_SET_FEATURE_LIB := libpower_set_feature_tomato
 # Power
 TARGET_PROVIDES_POWERHAL := true
 
+#Wifi
+TARGET_PROVIDES_WCNSS_QMI := true
+TARGET_QCOM_WLAN_VARIANT := wlan-caf
+
 # Radio
 DISABLE_RILD_OEM_HOOK := false
 TARGET_USE_OLD_MNC_FORMAT := true
