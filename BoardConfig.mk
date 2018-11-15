@@ -101,6 +101,13 @@ PRODUCT_BOOT_JARS += telephony-ext
 
 #mm-qcamera-deamon
 TARGET_DESTROYED_MUTEX_USAGE_WHITELIST := mm-qcamera-daemon
+# Recovery
+TARGET_RECOVERY_DENSITY := xhdpi
+TARGET_RECOVERY_FSTAB := device/yu/tomato/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
+
+# Inherit from proprietary files
+include vendor/yu/tomato/BoardConfigVendor.mk
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=23 \
