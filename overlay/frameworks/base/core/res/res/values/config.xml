@@ -102,8 +102,8 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- Add Night Display -->
-    <bool name="config_nightDisplayAvailable">true</bool>
+    <!-- Add Night Display 
+    <bool name="config_nightDisplayAvailable">true</bool> -->
 
     <!-- Enable Navigation Bar
     <bool name="config_showNavigationBar">true</bool> -->
@@ -158,5 +158,5 @@
     <bool name="config_carrier_vt_available">true</bool>
 
     <bool name="config_setColorTransformAccelerated">true</bool>
-
+          <bool name="config_swipe_up_gesture_setting_available">true</bool>
 </resources>
