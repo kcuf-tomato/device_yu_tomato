@@ -93,7 +93,14 @@ TARGET_LD_SHIM_LIBS += \
     /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
     /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
 
+
 TARGET_QCOM_WLAN_VARIANT := wlan-caf
+# Power
+TARGET_PROVIDES_POWERHAL := true
+
+# Radio
+DISABLE_RILD_OEM_HOOK := false
+TARGET_USE_OLD_MNC_FORMAT := true
 
 #Telephony
 PRODUCT_PACKAGES += qti-telephony-common
