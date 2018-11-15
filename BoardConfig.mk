@@ -16,6 +16,12 @@
 include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 include device/yu/tomato/board/*.mk
+#Platform
+BOARD_USES_ADRENO := true
+QCOM_HARDWARE_VARIANT := msm8916
+TARGET_USES_QCOM_BSP := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_USES_QCOM_MM_AUDIO := true
 
 # Assertions
 TARGET_BOARD_INFO_FILE := device/yu/tomato/board-info.txt
@@ -62,9 +68,21 @@ DEVICE_MANIFEST_FILE := device/yu/tomato/manifest.xml
 # Init
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := device/yu/tomato/init/init_tomato.cpp
 
+
 QCOM_HARDWARE_VARIANT := msm8916
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_USES_QCOM_MM_AUDIO := true
+# Kernel
+BOARD_DTBTOOL_ARGS := -2
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_SEPARATED_DT := true
+LZMA_RAMDISK_TARGETS := recovery
+TARGET_KERNEL_CONFIG := lineageos_tomato_defconfig
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+#KERNEL_TOOLCHAIN := /home/sanchit/linaro7/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
@@ -84,7 +102,18 @@ TARGET_DESTROYED_MUTEX_USAGE_WHITELIST := mm-qcamera-daemon
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=23 \
 	/system/vendor/bin/mm-qcamera-daemon=23
-WITH_DEXPREOPT := true
+# Dex optimizion
+ifeq ($(HOST_OS),linux)
+ ifneq ($(TARGET_BUILD_VARIANT),eng)
+   WITH_DEXPREOPT := true
+   WITH_DEXPREOPT_DEBUG_INFO := false
+   USE_DEX2OAT_DEBUG := false
+   USE_DEX2OAT_DEBUG := false
+   DONT_DEXPREOPT_PREBUILTS := true
+   WITH_DEXPREOPT_PIC := true
+   WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+ endif
+endif
 
 #SystemServer: Bootimg dex
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
