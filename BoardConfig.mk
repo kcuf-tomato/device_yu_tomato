@@ -26,10 +26,10 @@ TARGET_USES_QCOM_MM_AUDIO := true
 # Assertions
 TARGET_BOARD_INFO_FILE := device/yu/tomato/board-info.txt
 
-# Inherit from proprietary files
-include vendor/yu/tomato/BoardConfigVendor.mk
-#ALLOW_MISSING_DEPENDENCIES =true
-AUDIO_ENABLED_MULTI_VOICE_SESSIONS := true
+# Audio
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
+USE_LEGACY_LOCAL_AUDIO_HAL := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/yu/tomato/bluetooth
 
@@ -42,6 +42,11 @@ TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=23 \
 	/system/vendor/bin/mm-qcamera-daemon=23
+
+#HALS Varriant
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8916
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8916
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8916
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
