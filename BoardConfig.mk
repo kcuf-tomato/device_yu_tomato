@@ -84,3 +84,10 @@ TARGET_DESTROYED_MUTEX_USAGE_WHITELIST := mm-qcamera-daemon
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=23 \
 	/system/vendor/bin/mm-qcamera-daemon=23
+WITH_DEXPREOPT := true
+
+#SystemServer: Bootimg dex
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
