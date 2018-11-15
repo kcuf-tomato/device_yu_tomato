@@ -29,7 +29,7 @@ TARGET_BOARD_INFO_FILE := device/yu/tomato/board-info.txt
 # Inherit from proprietary files
 include vendor/yu/tomato/BoardConfigVendor.mk
 #ALLOW_MISSING_DEPENDENCIES =true
-WITH_DEXPREOPT := false
+AUDIO_ENABLED_MULTI_VOICE_SESSIONS := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/yu/tomato/bluetooth
 
