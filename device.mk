@@ -51,3 +51,9 @@ libhealthd.cm
 
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
+
+# Shims
+PRODUCT_PACKAGES += \
+    libshims_boringssl \
+    libshims_camera \
+    libshims_ims

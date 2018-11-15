@@ -29,6 +29,12 @@ QCOM_HARDWARE_VARIANT := msm8916
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+    /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
+    /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
+
 TARGET_QCOM_WLAN_VARIANT := wlan-caf
 
 #Telephony
