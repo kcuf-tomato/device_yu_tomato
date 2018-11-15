@@ -154,10 +154,13 @@
     <!-- Flag specifying whether VT is available on device -->
     <bool name="config_device_vt_available">true</bool>
 
+         <!--Button backlight -->
+         <bool name="config_button_brightness_support">true</bool>
+         <integer name="config_button_brightness_default">128</integer>
     <!-- Flag specifying whether VT should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-    <bool name="config_carrier_vt_available">true</bool>
+         provisioning, availability etc 
+    <bool name="config_carrier_vt_available">true</bool> -->
 
     <bool name="config_setColorTransformAccelerated">true</bool>
           <bool name="config_swipe_up_gesture_setting_available">true</bool>
