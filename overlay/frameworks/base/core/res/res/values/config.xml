@@ -108,6 +108,10 @@
     <!-- Enable Navigation Bar
     <bool name="config_showNavigationBar">true</bool> -->
 
+    <!-- Enable doze mode
+         ComponentName of a dream to show whenever the system would otherwise have gone to sleep. -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
@@ -130,6 +134,15 @@
          to maximize power savings but not all devices support it.
          Refer to power.h for details. -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+
+    <!-- Set this to true to enable the platform's auto-power-save modes like doze and
+          app standby.  These are not enabled by default because they require a standard
+          cloud-to-device messaging service for apps to interact correctly with the modes
+          (such as to be able to deliver an instant message to the device even when it is
+          dozing).  This should be enabled if you have such services and expect apps to
+          correctly use them when installed on your device.  Otherwise, keep this disabled
+          so that applications can still use their own mechanisms. -->
+     <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
