@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
- *               2017 The LineageOS Project
+ * Copyright (c) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package com.cyanogenmod.settings.doze;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,7 +24,7 @@ import android.util.Log;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "YuDoze";
+    private static final String TAG = "YUDoze";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
