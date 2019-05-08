@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2016, The Linux Foundataion. All rights reserved.
+/* Copyright (c) 2012-2017, The Linux Foundataion. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -181,16 +181,15 @@ public:
 
 protected:
     camera_request_memory mGetMemory;
-    void* mCallbackCookie;
     camera_memory_t *mCameraMemory[MM_CAMERA_MAX_NUM_FRAMES];
+    void* mCallbackCookie;
 };
 
 // Externel heap memory is used for memories shared with
 // framework. They are allocated from /dev/ion or gralloc.
 class QCameraVideoMemory : public QCameraStreamMemory {
 public:
-    QCameraVideoMemory(camera_request_memory getMemory,
-            void* cbCookie, bool cached);
+    QCameraVideoMemory(camera_request_memory getMemory, void* cbCookie, bool cached);
     virtual ~QCameraVideoMemory();
 
     virtual int allocate(uint8_t count, size_t size);
@@ -199,7 +198,7 @@ public:
     virtual camera_memory_t *getMemory(uint32_t index, bool metadata) const;
     virtual int getMatchBufIndex(const void *opaque, bool metadata) const;
     native_handle_t *updateNativeHandle(uint32_t index, bool metadata = true);
-    int closeNativeHandle(const void *data, bool metadata = true);
+    int closeNativeHandle(const void *data, bool metadata);
     static int closeNativeHandle(const void *data);
 
 private:

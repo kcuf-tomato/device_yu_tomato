@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2016, The Linux Foundataion. All rights reserved.
+/* Copyright (c) 2012-2017, The Linux Foundataion. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -1227,10 +1227,9 @@ void *QCameraStreamMemory::getPtr(uint32_t index) const
  *
  * RETURN     : none
  *==========================================================================*/
-QCameraVideoMemory::QCameraVideoMemory(camera_request_memory memory,
-                                       void* cbCookie,
+QCameraVideoMemory::QCameraVideoMemory(camera_request_memory getMemory, void* cbCookie,
                                        bool cached)
-    : QCameraStreamMemory(memory, cbCookie, cached)
+    : QCameraStreamMemory(getMemory, cbCookie, cached)
 {
     memset(mMetadata, 0, sizeof(mMetadata));
     memset(mNativeHandle, 0, sizeof(mNativeHandle));
@@ -1477,15 +1476,16 @@ int QCameraVideoMemory::getMatchBufIndex(const void *opaque,
  *
  * RETURN     : none
  *==========================================================================*/
-QCameraGrallocMemory::QCameraGrallocMemory(camera_request_memory getMemory, void* cbCookie)
+QCameraGrallocMemory::QCameraGrallocMemory(camera_request_memory getMemory,
+                                           void* cbCookie)
         : QCameraMemory(true)
 {
     mMinUndequeuedBuffers = 0;
     mWindow = NULL;
     mWidth = mHeight = mStride = mScanline = 0;
     mFormat = HAL_PIXEL_FORMAT_YCrCb_420_SP;
-    mGetMemory = getMemory;
     mCallbackCookie = cbCookie;
+    mGetMemory = getMemory;
     for (int i = 0; i < MM_CAMERA_MAX_NUM_FRAMES; i ++) {
         mBufferHandle[i] = NULL;
         mLocalFlag[i] = BUFFER_NOT_OWNED;
