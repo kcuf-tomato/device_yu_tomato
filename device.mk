@@ -52,17 +52,13 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    camera.device@3.2-impl \
     camera.msm8916 \
     libmm-qcamera \
-    SnapdragonCamera
+    Snap
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -223,3 +219,8 @@ PRODUCT_COPY_FILES += \
 # YUDoze
 PRODUCT_PACKAGES += \
     YUDoze
+
+# Display Calibration
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm \
+    vendor.lineage.livedisplay@2.0-service-sysfs
